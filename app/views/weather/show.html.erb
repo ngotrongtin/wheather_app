@@ -1,0 +1,9 @@
+<% if flash[:error] %>
+  <p><%= flash[:error] %></p>
+<% else %>
+  <h1>Weather Forecast for <%= @weather_data['name'] %></h1>
+  <p>Temperature: <%= @weather_data['main']['temp'] %>°C</p>
+  <p>Description: <%= @weather_data['weather'][0]['description'] %></p>
+  <p>Icon: <img src="http://openweathermap.org/img/w/<%= @weather_data['weather'][0]['icon'] %>.png" alt="Weather Icon"></p>
+  <p>Time: <%= @current_time %></p>
+<% end %>

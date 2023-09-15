@@ -1,0 +1,6 @@
+<h1>Weather Forecast App</h1>
+
+<%= form_tag(weather_path, method: :get) do %>
+  <%= text_field_tag :city, nil, placeholder: 'Enter city name...' %>
+  <%= submit_tag 'Get Weather' %>
+<% end %>
